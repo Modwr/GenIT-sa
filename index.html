@@ -1,386 +1,254 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl" id="html-tag">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gen-IT — Generation Information Technology</title>
-  <meta name="description" content="Gen-IT — Leading ICT solutions provider in Saudi Arabia. Networks, security, low-current systems, and infrastructure." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEN IT | جيل تقنية المعلومات</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="text-slate-700 antialiased selection:bg-[#0f172a] selection:text-white">
 
-  <!-- NAVBAR -->
-  <nav class="navbar" id="navbar">
-    <div class="container nav-inner">
-      <a href="#home" class="logo">
-        <div class="logo-mark">GI</div>
-        <div class="logo-text">
-          <span class="logo-name">Gen<em>-IT</em></span>
-          <span class="logo-sub" data-en="Generation Information Technology" data-ar="جيل تقنية المعلومات">Generation Information Technology</span>
-        </div>
-      </a>
-      <div class="nav-links">
-        <a href="#services" data-en="Services" data-ar="خدماتنا">Services</a>
-        <a href="#about" data-en="About" data-ar="من نحن">About</a>
-        <a href="#vendors" data-en="Partners" data-ar="شركاؤنا">Partners</a>
-        <a href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a>
-        <button class="lang-toggle" id="langToggle" onclick="toggleLang()">عربي</button>
-        <a href="#contact" class="btn-nav" data-en="Get in Touch" data-ar="تواصل معنا">Get in Touch</a>
-      </div>
-      <button class="hamburger" id="hamburger" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#services" onclick="toggleMenu()" data-en="Services" data-ar="خدماتنا">Services</a>
-      <a href="#about" onclick="toggleMenu()" data-en="About" data-ar="من نحن">About</a>
-      <a href="#vendors" onclick="toggleMenu()" data-en="Partners" data-ar="شركاؤنا">Partners</a>
-      <a href="#contact" onclick="toggleMenu()" data-en="Contact" data-ar="اتصل بنا">Contact</a>
-      <button class="lang-toggle" onclick="toggleLang(); toggleMenu()">عربي</button>
-    </div>
-  </nav>
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2 space-x-reverse">
+                <span class="text-2xl font-bold text-[#0f172a] tracking-wider font-[Poppins]">GEN <span class="text-blue-600">IT</span></span>
+            </a>
+            
+            <nav class="hidden md:flex space-x-8 space-x-reverse text-sm font-semibold" id="nav-links">
+                </nav>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-bg"></div>
-    <div class="container hero-inner">
-      <div class="hero-content">
-        <div class="hero-badge">
-          <span class="badge-dot"></span>
-          <span data-en="Saudi ICT Solutions Provider" data-ar="مزود حلول تقنية المعلومات في السعودية">Saudi ICT Solutions Provider</span>
-        </div>
-        <h1 class="hero-h1">
-          <span data-en="U-Connect" data-ar="تواصل">U-Connect</span><br/>
-          <em data-en="with your future." data-ar="مع مستقبلك.">with your future.</em>
-        </h1>
-        <p class="hero-p" data-en="Integrated solutions in IT, telecommunications, and network infrastructure — delivered to the highest global standards across Saudi Arabia." data-ar="حلول متكاملة في تقنية المعلومات والاتصالات والبنية التحتية للشبكات — بأعلى المعايير العالمية في جميع أنحاء المملكة العربية السعودية.">
-          Integrated solutions in IT, telecommunications, and network infrastructure — delivered to the highest global standards across Saudi Arabia.
-        </p>
-        <div class="hero-btns">
-          <a href="#services" class="btn-primary" data-en="Explore Services" data-ar="اكتشف خدماتنا">Explore Services</a>
-          <a href="#contact" class="btn-outline" data-en="Contact Us" data-ar="تواصل معنا">Contact Us</a>
-        </div>
-      </div>
-      <div class="hero-stats">
-        <div class="stat-card">
-          <div class="stat-num">10<span>+</span></div>
-          <div class="stat-label" data-en="Years of Experience" data-ar="سنوات خبرة">Years of Experience</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">15<span>+</span></div>
-          <div class="stat-label" data-en="Global Tech Partners" data-ar="شريك تقني عالمي">Global Tech Partners</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">2030</div>
-          <div class="stat-label" data-en="Vision Aligned" data-ar="نساند رؤية المملكة">Vision Aligned</div>
-        </div>
-      </div>
-    </div>
-    <div class="hero-scroll">
-      <span data-en="Scroll to explore" data-ar="مرر للاستكشاف">Scroll to explore</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section class="services" id="services">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag" data-en="What We Offer" data-ar="ماذا نقدم">What We Offer</span>
-        <h2 class="section-title" data-en="Our Solutions & Services" data-ar="حلولنا وخدماتنا">Our Solutions & Services</h2>
-        <p class="section-sub" data-en="A comprehensive range of ICT solutions built for the Saudi market — public and private sectors." data-ar="طيف شامل من حلول تقنية المعلومات للقطاعين العام والخاص في السوق السعودي.">A comprehensive range of ICT solutions built for the Saudi market — public and private sectors.</p>
-      </div>
-      <div class="services-grid">
-        <div class="svc-card">
-          <div class="svc-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><path d="M12 2a10 10 0 0 1 7.39 16.71"/><path d="M12 2a10 10 0 0 0-7.39 16.71"/><path d="M4.93 7a8 8 0 0 0 0 10"/><path d="M19.07 7a8 8 0 0 1 0 10"/></svg>
-          </div>
-          <div class="svc-number">01</div>
-          <h3 class="svc-title" data-en="Wireless & Networking Systems" data-ar="أنظمة الشبكات والاتصالات اللاسلكية">Wireless & Networking Systems</h3>
-          <p class="svc-desc" data-en="Enterprise-grade wired and wireless networks for seamless connectivity across your organisation." data-ar="شبكات سلكية ولاسلكية على مستوى المؤسسات لاتصال سلس في جميع أنحاء مؤسستك.">Enterprise-grade wired and wireless networks for seamless connectivity across your organisation.</p>
-          <div class="svc-brands">
-            <span>Cisco</span><span>Aruba</span><span>Huawei</span><span>Ruijie</span>
-          </div>
-        </div>
-        <div class="svc-card">
-          <div class="svc-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-          </div>
-          <div class="svc-number">02</div>
-          <h3 class="svc-title" data-en="Information Technology Systems" data-ar="أنظمة تقنية المعلومات">Information Technology Systems</h3>
-          <p class="svc-desc" data-en="Full-stack IT infrastructure: servers, storage, virtualisation, and cloud integration tailored to your needs." data-ar="بنية تحتية IT متكاملة: خوادم، تخزين، افتراضية وتكامل سحابي مخصص لاحتياجاتك.">Full-stack IT infrastructure: servers, storage, virtualisation, and cloud integration tailored to your needs.</p>
-          <div class="svc-brands">
-            <span>Servers</span><span>Storage</span><span>Cloud</span><span>Virtualisation</span>
-          </div>
-        </div>
-        <div class="svc-card">
-          <div class="svc-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-          </div>
-          <div class="svc-number">03</div>
-          <h3 class="svc-title" data-en="Low-Current Systems" data-ar="أنظمة التيار الضعيف">Low-Current Systems</h3>
-          <p class="svc-desc" data-en="CCTV surveillance, IP telephony, access control, UPS, and smart building systems." data-ar="كاميرات المراقبة، الهاتف عبر IP، التحكم بالدخول، أنظمة UPS والمباني الذكية.">CCTV surveillance, IP telephony, access control, UPS, and smart building systems.</p>
-          <div class="svc-brands">
-            <span>Hikvision</span><span>Bosch</span><span>Yeastar</span><span>APC</span>
-          </div>
-        </div>
-        <div class="svc-card">
-          <div class="svc-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <div class="svc-number">04</div>
-          <h3 class="svc-title" data-en="Network Security & Protection" data-ar="أمن وحماية الشبكات">Network Security & Protection</h3>
-          <p class="svc-desc" data-en="End-to-end cybersecurity: firewalls, IDS/IPS, monitoring, and threat management for your network." data-ar="أمن سيبراني شامل: جدران الحماية، IDS/IPS، المراقبة وإدارة التهديدات لشبكتك.">End-to-end cybersecurity: firewalls, IDS/IPS, monitoring, and threat management for your network.</p>
-          <div class="svc-brands">
-            <span>Firewall</span><span>IDS/IPS</span><span>SOC</span><span>Monitoring</span>
-          </div>
-        </div>
-        <div class="svc-card">
-          <div class="svc-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-          </div>
-          <div class="svc-number">05</div>
-          <h3 class="svc-title" data-en="Structured Cabling Systems" data-ar="أنظمة الكابلات الهيكلية">Structured Cabling Systems</h3>
-          <p class="svc-desc" data-en="Professional structured cabling infrastructure using world-class passive components." data-ar="بنية تحتية لتمديد الكابلات الاحترافية باستخدام مكونات سلبية عالمية المستوى.">Professional structured cabling infrastructure using world-class passive components.</p>
-          <div class="svc-brands">
-            <span>Corning</span><span>Belden</span><span>CommScope</span><span>3M</span>
-          </div>
-        </div>
-        <div class="svc-card">
-          <div class="svc-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07M8.46 8.46a5 5 0 0 0 0 7.07"/></svg>
-          </div>
-          <div class="svc-number">06</div>
-          <h3 class="svc-title" data-en="Professional Services" data-ar="الخدمات الاحترافية">Professional Services</h3>
-          <p class="svc-desc" data-en="Consulting, project management, maintenance, and support to keep your systems running at peak performance." data-ar="استشارات، إدارة مشاريع، صيانة ودعم لإبقاء أنظمتك تعمل بأعلى أداء.">Consulting, project management, maintenance, and support to keep your systems running at peak performance.</p>
-          <div class="svc-brands">
-            <span>Consulting</span><span>PM</span><span>Maintenance</span><span>Support</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="container about-inner">
-      <div class="about-visual">
-        <div class="about-card-main">
-          <div class="about-icon-wrap">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          </div>
-          <p class="about-card-text" data-en="Proudly serving Saudi Arabia's public & private sectors." data-ar="نخدم بفخر القطاعين العام والخاص في المملكة العربية السعودية.">Proudly serving Saudi Arabia's public & private sectors.</p>
-        </div>
-        <div class="about-card-float">
-          <div class="vision-label" data-en="Vision 2030" data-ar="رؤية 2030">Vision 2030</div>
-          <p data-en="Aligned with Saudi digital transformation goals." data-ar="متوافقون مع أهداف التحول الرقمي السعودي.">Aligned with Saudi digital transformation goals.</p>
-        </div>
-      </div>
-      <div class="about-content">
-        <span class="section-tag" data-en="Who We Are" data-ar="من نحن">Who We Are</span>
-        <h2 class="section-title" data-en="Company Overview" data-ar="نظرة عامة على المؤسسة">Company Overview</h2>
-        <p class="about-p" data-en="Gen-IT is a leading Saudi institution delivering integrated ICT solutions across IT, telecommunications, and network infrastructure. We serve public and private sectors with world-class standards, helping clients achieve digital transformation aligned with Saudi Vision 2030." data-ar="Gen-IT مؤسسة سعودية رائدة تقدم حلول ICT متكاملة في تقنية المعلومات والاتصالات والبنية التحتية للشبكات. نخدم القطاعين العام والخاص بأعلى المعايير العالمية، ونساعد عملاءنا على تحقيق التحول الرقمي المتوافق مع رؤية المملكة 2030.">
-          Gen-IT is a leading Saudi institution delivering integrated ICT solutions across IT, telecommunications, and network infrastructure. We serve public and private sectors with world-class standards, helping clients achieve digital transformation aligned with Saudi Vision 2030.
-        </p>
-        <div class="about-pillars">
-          <div class="pillar">
-            <div class="pillar-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <button id="lang-switch" class="bg-slate-50 hover:bg-slate-100 text-[#0f172a] border border-slate-200 px-4 py-2 rounded-xl text-xs font-bold transition duration-300">
+                    English
+                </button>
+                <a href="#contact" id="nav-cta" class="hidden md:block bg-[#0f172a] hover:bg-blue-900 text-white px-5 py-2.5 rounded-xl text-sm font-bold transition duration-300 shadow-md">
+                    طلب استشارة مجانية
+                </a>
             </div>
-            <div>
-              <div class="pillar-title" data-en="Our Vision" data-ar="رؤيتنا">Our Vision</div>
-              <div class="pillar-text" data-en="To be a leading provider of innovative and integrated ICT solutions with high quality at competitive prices." data-ar="أن نكون من الرواد في تقديم حلول ICT مبتكرة ومتكاملة بجودة عالية وأسعار تنافسية.">To be a leading provider of innovative and integrated ICT solutions with high quality at competitive prices.</div>
-            </div>
-          </div>
-          <div class="pillar">
-            <div class="pillar-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <div>
-              <div class="pillar-title" data-en="Our Mission" data-ar="رسالتنا">Our Mission</div>
-              <div class="pillar-text" data-en="Delivering reliable, user-friendly ICT solutions across KSA — empowering clients to choose, control, and customise their services." data-ar="تقديم حلول ICT موثوقة وسهلة الاستخدام في المملكة — تمكين العملاء من الاختيار والتحكم والتخصيص.">Delivering reliable, user-friendly ICT solutions across KSA — empowering clients to choose, control, and customise their services.</div>
-            </div>
-          </div>
-          <div class="pillar">
-            <div class="pillar-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <div>
-              <div class="pillar-title" data-en="Our Values" data-ar="قيمنا">Our Values</div>
-              <div class="pillar-text" data-en="Quality · Professionalism · Precision · Long-term Partnership" data-ar="الجودة · الاحترافية · الدقة · الشراكة طويلة الأمد">Quality · Professionalism · Precision · Long-term Partnership</div>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- GOALS -->
-  <section class="goals" id="goals">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag" data-en="Our Goals" data-ar="أهدافنا">Our Goals</span>
-        <h2 class="section-title" data-en="Driving Innovation for a Smarter Tomorrow" data-ar="دفع الابتكار من أجل غد أكثر ذكاءً">Driving Innovation for a Smarter Tomorrow</h2>
-      </div>
-      <div class="goals-grid">
-        <div class="goal-card">
-          <div class="goal-num">01</div>
-          <h3 class="goal-title" data-en="Enhanced Customer Experience" data-ar="تعزيز تجربة العميل">Enhanced Customer Experience</h3>
-          <p class="goal-desc" data-en="Seamless, personalised, value-driven experiences that exceed customer expectations." data-ar="تجارب سلسة ومخصصة ومبنية على القيمة تتجاوز توقعات العملاء.">Seamless, personalised, value-driven experiences that exceed customer expectations.</p>
-        </div>
-        <div class="goal-card">
-          <div class="goal-num">02</div>
-          <h3 class="goal-title" data-en="Maximised Process Efficiency" data-ar="تعظيم كفاءة العمليات">Maximised Process Efficiency</h3>
-          <p class="goal-desc" data-en="Streamlining operations to reduce complexity and achieve optimal performance." data-ar="تبسيط العمليات لتقليل التعقيد وتحقيق الأداء الأمثل.">Streamlining operations to reduce complexity and achieve optimal performance.</p>
-        </div>
-        <div class="goal-card">
-          <div class="goal-num">03</div>
-          <h3 class="goal-title" data-en="Greater Organisational Agility" data-ar="زيادة المرونة المؤسسية">Greater Organisational Agility</h3>
-          <p class="goal-desc" data-en="Empowering adaptability and responsiveness to evolving market demands and technologies." data-ar="تمكين القدرة على التكيّف والاستجابة لمتغيرات السوق والتقنيات الحديثة.">Empowering adaptability and responsiveness to evolving market demands and technologies.</p>
-        </div>
-        <div class="goal-card">
-          <div class="goal-num">04</div>
-          <h3 class="goal-title" data-en="Optimised Business Operations" data-ar="تحسين العمليات التشغيلية">Optimised Business Operations</h3>
-          <p class="goal-desc" data-en="Continuously improving and innovating business processes to drive growth and sustainability." data-ar="التحسين المستمر والابتكار في العمليات التجارية لتحقيق النمو والاستدامة.">Continuously improving and innovating business processes to drive growth and sustainability.</p>
-        </div>
-        <div class="goal-card">
-          <div class="goal-num">05</div>
-          <h3 class="goal-title" data-en="Strengthened Strategic Partnerships" data-ar="تعزيز الشراكات الاستراتيجية">Strengthened Strategic Partnerships</h3>
-          <p class="goal-desc" data-en="Building long-term, trusted alliances with leading technology and market partners." data-ar="بناء تحالفات طويلة الأمد وموثوقة مع كبار شركاء التقنية والسوق.">Building long-term, trusted alliances with leading technology and market partners.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- VENDORS -->
-  <section class="vendors" id="vendors">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag" data-en="Vendor Community" data-ar="مجتمع الموردين">Vendor Community</span>
-        <h2 class="section-title" data-en="Our Technology Partners" data-ar="شركاؤنا التقنيون">Our Technology Partners</h2>
-        <p class="section-sub" data-en="We work with the world's leading technology brands to deliver the best solutions." data-ar="نتعاون مع كبرى العلامات التقنية العالمية لتقديم أفضل الحلول.">We work with the world's leading technology brands to deliver the best solutions.</p>
-      </div>
-      <div class="vendors-categories">
-        <div class="vendor-cat">
-          <div class="vendor-cat-label" data-en="Active Networking" data-ar="شبكات نشطة">Active Networking</div>
-          <div class="vendor-logos">
-            <div class="vendor-logo">Cisco</div>
-            <div class="vendor-logo">Aruba</div>
-            <div class="vendor-logo">Huawei</div>
-            <div class="vendor-logo">Ruijie</div>
-          </div>
-        </div>
-        <div class="vendor-cat">
-          <div class="vendor-cat-label" data-en="Passive / Cabling" data-ar="سلبي / كابلات">Passive / Cabling</div>
-          <div class="vendor-logos">
-            <div class="vendor-logo">Corning</div>
-            <div class="vendor-logo">CommScope</div>
-            <div class="vendor-logo">Belden</div>
-            <div class="vendor-logo">3M</div>
-            <div class="vendor-logo">Panduit</div>
-            <div class="vendor-logo">Datwyler</div>
-          </div>
-        </div>
-        <div class="vendor-cat">
-          <div class="vendor-cat-label" data-en="CCTV & Surveillance" data-ar="كاميرات المراقبة">CCTV & Surveillance</div>
-          <div class="vendor-logos">
-            <div class="vendor-logo">Hikvision</div>
-            <div class="vendor-logo">Bosch</div>
-            <div class="vendor-logo">Honeywell</div>
-            <div class="vendor-logo">Dahua</div>
-            <div class="vendor-logo">Axis</div>
-          </div>
-        </div>
-        <div class="vendor-cat">
-          <div class="vendor-cat-label" data-en="IP Telephony" data-ar="هاتف IP">IP Telephony</div>
-          <div class="vendor-logos">
-            <div class="vendor-logo">Yeastar</div>
-            <div class="vendor-logo">Grandstream</div>
-          </div>
-        </div>
-        <div class="vendor-cat">
-          <div class="vendor-cat-label" data-en="UPS & Power" data-ar="طاقة احتياطية">UPS & Power</div>
-          <div class="vendor-logos">
-            <div class="vendor-logo">APC</div>
-            <div class="vendor-logo">Legrand</div>
-            <div class="vendor-logo">Eaton</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <div class="container contact-inner">
-      <div class="contact-content">
-        <span class="section-tag light" data-en="Get In Touch" data-ar="تواصل معنا">Get In Touch</span>
-        <h2 class="section-title light" data-en="Ready to Connect?" data-ar="جاهز للتواصل معنا؟">Ready to Connect?</h2>
-        <p class="contact-p" data-en="Our team works side-by-side with clients to build the ideal technology infrastructure. Let's start your project today." data-ar="فريقنا يعمل جنباً إلى جنب مع العملاء لبناء البنية التحتية التقنية المثالية. لنبدأ مشروعك اليوم.">Our team works side-by-side with clients to build the ideal technology infrastructure. Let's start your project today.</p>
-        <div class="contact-info">
-          <a href="mailto:info@genit-sa.com" class="contact-item">
-            <div class="contact-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    <section class="relative min-h-[85vh] pt-32 flex items-center justify-center overflow-hidden premium-hero-gradient text-white">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_0,transparent_100%)]"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center max-w-4xl">
+            <span class="inline-block bg-white/10 text-blue-300 text-xs font-bold px-4 py-2 rounded-full border border-white/10 mb-6 tracking-wider font-[Poppins]">
+                U-Connect with your future
+            </span>
+            <h1 id="hero-title" class="text-4xl md:text-6xl font-bold leading-tight mb-6"></h1>
+            <p id="hero-desc" class="text-slate-300 text-base md:text-lg mb-10 max-w-2xl mx-auto leading-relaxed"></p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#contact" id="hero-btn-primary" class="w-full sm:w-auto bg-white hover:bg-slate-100 text-[#0f172a] px-8 py-4 rounded-xl font-bold transition text-center shadow-lg"></a>
+                <a href="#services" id="hero-btn-secondary" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/20 text-white px-8 py-4 rounded-xl font-semibold transition text-center"></a>
             </div>
-            <span>info@genit-sa.com</span>
-          </a>
         </div>
-        <div class="contact-slogan" data-en="U-Connect with your future" data-ar="تواصل مع مستقبلك">U-Connect with your future</div>
-      </div>
-      <div class="contact-form-wrap">
-        <form class="contact-form" onsubmit="handleSubmit(event)">
-          <div class="form-group">
-            <label data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
-            <input type="text" placeholder="" id="nameInput" required />
-          </div>
-          <div class="form-group">
-            <label data-en="Email Address" data-ar="البريد الإلكتروني">Email Address</label>
-            <input type="email" placeholder="" id="emailInput" required />
-          </div>
-          <div class="form-group">
-            <label data-en="Company" data-ar="الشركة">Company</label>
-            <input type="text" placeholder="" id="companyInput" />
-          </div>
-          <div class="form-group">
-            <label data-en="Message" data-ar="الرسالة">Message</label>
-            <textarea rows="4" id="messageInput" required></textarea>
-          </div>
-          <button type="submit" class="btn-submit">
-            <span data-en="Send Message" data-ar="إرسال الرسالة">Send Message</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-          </button>
-          <div id="formMsg" class="form-msg"></div>
-        </form>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-logo">
-        <div class="logo-mark small">GI</div>
-        <div>
-          <div class="logo-name footer-name">Gen<em>-IT</em></div>
-          <div class="logo-sub" data-en="Generation Information Technology" data-ar="جيل تقنية المعلومات">Generation Information Technology</div>
+    <section id="about" class="py-24 bg-white border-b border-slate-100">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span id="about-tag" class="text-blue-600 font-bold text-xs uppercase tracking-widest block mb-3"></span>
+                    <h2 id="about-title" class="text-3xl font-bold text-[#0f172a] mb-6 tracking-tight"></h2>
+                    <p id="about-p1" class="text-slate-500 leading-relaxed mb-6 text-sm md:text-base"></p>
+                    <p id="about-p2" class="text-slate-500 leading-relaxed mb-8 text-sm md:text-base"></p>
+                </div>
+                <div class="space-y-6">
+                    <div class="corporate-card p-8 rounded-2xl">
+                        <h3 id="vision-title" class="text-lg font-bold text-[#0f172a] mb-3 flex items-center gap-3"></h3>
+                        <p id="vision-desc" class="text-slate-500 text-sm leading-relaxed"></p>
+                    </div>
+                    <div class="corporate-card p-8 rounded-2xl">
+                        <h3 id="mission-title" class="text-lg font-bold text-[#0f172a] mb-3 flex items-center gap-3"></h3>
+                        <p id="mission-desc" class="text-slate-500 text-sm leading-relaxed"></p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="footer-links">
-        <a href="#services" data-en="Services" data-ar="خدماتنا">Services</a>
-        <a href="#about" data-en="About" data-ar="من نحن">About</a>
-        <a href="#vendors" data-en="Partners" data-ar="شركاؤنا">Partners</a>
-        <a href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a>
-      </div>
-      <div class="footer-copy">
-        <span>© 2025 Gen-IT.</span>
-        <span data-en="All rights reserved." data-ar="جميع الحقوق محفوظة.">All rights reserved.</span>
-      </div>
-    </div>
-  </footer>
+    </section>
 
-  <script src="script.js"></script>
+    <section id="services" class="py-24 bg-slate-50 border-b border-slate-100">
+        <div class="container mx-auto px-6 text-center">
+            <span id="services-tag" class="text-blue-600 font-bold text-xs uppercase tracking-widest block mb-3"></span>
+            <h2 id="services-title" class="text-3xl font-bold text-[#0f172a] mb-16 tracking-tight"></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-right" id="services-grid">
+                </div>
+        </div>
+    </section>
+
+    <section id="goals" class="py-24 bg-[#0f172a] text-white border-b border-slate-100">
+        <div class="container mx-auto px-6 text-center">
+            <span id="goals-tag" class="text-blue-400 font-bold text-xs uppercase tracking-widest block mb-3"></span>
+            <h2 id="goals-title" class="text-3xl font-bold text-white mb-16 tracking-tight"></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-right" id="goals-grid">
+                </div>
+        </div>
+    </section>
+
+    <section id="vendors" class="py-24 bg-white border-b border-slate-100">
+        <div class="container mx-auto px-6 text-center">
+            <span id="vendors-tag" class="text-blue-600 font-bold text-xs uppercase tracking-widest block mb-3"></span>
+            <h2 id="vendors-title" class="text-3xl font-bold text-[#0f172a] mb-16 tracking-tight"></h2>
+
+            <div class="space-y-8 max-w-5xl mx-auto">
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 text-right">
+                    <h3 id="vcat-1" class="text-[#0f172a] font-bold mb-6 text-sm uppercase tracking-wider border-r-4 border-blue-600 pr-3"></h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                        <div class="vendor-badge">
+                            <span class="text-red-600 font-bold text-xl tracking-wide font-[Poppins]">Ruijie</span>
+                        </div>
+                        <div class="vendor-badge">
+                            <svg viewBox="0 0 100 40" class="h-10"><path d="M10,30 L25,5 L40,30 Z" fill="#FF8300"/><text x="45" y="25" font-family="sans-serif" font-weight="bold" font-size="14" fill="#000">aruba</text></svg>
+                        </div>
+                        <div class="vendor-badge">
+                            <svg viewBox="0 0 40 40" class="h-12"><circle cx="20" cy="20" r="16" fill="none" stroke="#ED1C24" stroke-width="2"/><path d="M20,6 C25,12 25,28 20,34 C15,28 15,12 20,6 Z" fill="#ED1C24"/></svg>
+                        </div>
+                        <div class="vendor-badge">
+                            <svg viewBox="0 0 60 40" class="h-10"><g fill="#049FD9"><rect x="5" y="15" width="3" height="10"/><rect x="12" y="10" width="3" height="20"/><rect x="19" y="5" width="3" height="30"/><rect x="26" y="10" width="3" height="20"/><rect x="33" y="15" width="3" height="10"/><rect x="40" y="5" width="3" height="30"/><rect x="47" y="15" width="3" height="10"/></g></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 text-right">
+                    <h3 id="vcat-2" class="text-[#0f172a] font-bold mb-6 text-sm uppercase tracking-wider border-r-4 border-blue-600 pr-3"></h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+                        <div class="vendor-badge">
+                            <span class="text-blue-800 font-bold text-sm">DATWYLER</span>
+                        </div>
+                        <div class="vendor-badge">
+                            <span class="text-green-700 font-extrabold text-sm font-[Poppins]">PANDUIT</span>
+                        </div>
+                        <div class="vendor-badge">
+                            <span class="text-red-600 font-black text-2xl font-[Poppins]">3M</span>
+                        </div>
+                        <div class="vendor-badge">
+                            <span class="text-blue-900 font-black text-base font-[Poppins]">BELDEN</span>
+                        </div>
+                        <div class="vendor-badge">
+                            <span class="text-teal-600 font-bold text-xs tracking-tight font-[Poppins]">COMMSCOPE</span>
+                        </div>
+                        <div class="vendor-badge">
+                            <span class="text-slate-800 font-light text-base font-serif">CORNING</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-right">
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                        <h3 id="vcat-ip" class="text-[#0f172a] font-bold mb-4 text-xs uppercase tracking-wider border-r-4 border-blue-600 pr-3"></h3>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="vendor-badge !h-[75px]">
+                                <span class="text-blue-500 font-bold text-xs">GRANDSTREAM</span>
+                            </div>
+                            <div class="vendor-badge !h-[75px]">
+                                <span class="text-emerald-500 font-semibold text-sm">Yeastar</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                        <h3 id="vcat-3" class="text-[#0f172a] font-bold mb-4 text-xs uppercase tracking-wider border-r-4 border-blue-600 pr-3"></h3>
+                        <div class="grid grid-cols-3 gap-3">
+                            <div class="vendor-badge !h-[75px] !p-1">
+                                <span class="text-red-600 font-bold text-xs">HIKVISION</span>
+                            </div>
+                            <div class="vendor-badge !h-[75px] !p-1">
+                                <span class="text-amber-500 font-extrabold text-xs">Honeywell</span>
+                            </div>
+                            <div class="vendor-badge !h-[75px] !p-1">
+                                <span class="text-slate-900 font-bold text-sm">BOSCH</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                        <h3 id="vcat-ups" class="text-[#0f172a] font-bold mb-4 text-xs uppercase tracking-wider border-r-4 border-blue-600 pr-3"></h3>
+                        <div class="grid grid-cols-3 gap-3">
+                            <div class="vendor-badge !h-[75px]">
+                                <span class="text-red-700 font-bold text-xs">legrand</span>
+                            </div>
+                            <div class="vendor-badge !h-[75px]">
+                                <span class="text-blue-600 font-extrabold text-sm">EATON</span>
+                            </div>
+                            <div class="vendor-badge !h-[75px]">
+                                <span class="text-green-600 font-black text-sm">APC</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-slate-50">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-12">
+                <span id="contact-tag" class="text-blue-600 font-bold text-xs uppercase tracking-widest block mb-3"></span>
+                <h2 id="contact-title" class="text-3xl font-bold text-[#0f172a] mb-4 tracking-tight"></h2>
+                <p id="contact-desc" class="text-slate-500 text-sm"></p>
+            </div>
+
+            <div id="sla-responder" class="hidden mb-8 bg-blue-50 border border-blue-200 text-[#0f172a] p-6 rounded-2xl text-right transition-all duration-500 shadow-sm">
+                <div class="flex items-start gap-4">
+                    <div class="text-blue-600 text-2xl mt-1"><i class="fas fa-check-circle animate-pulse"></i></div>
+                    <div>
+                        <h4 id="sla-title" class="font-bold mb-2 text-sm text-[#0f172a]"></h4>
+                        <p id="sla-body" class="text-slate-600 text-xs md:text-sm leading-relaxed"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 md:p-10 rounded-3xl border border-slate-200/60 shadow-xl shadow-slate-100">
+                <form id="lead-form" class="space-y-6" action="https://formsubmit.co/info@genit-sa.com" method="POST">
+                    <input type="hidden" name="_subject" value="New lead from GEN-IT website">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label id="lbl-company" class="block text-slate-500 text-xs font-bold mb-2"></label>
+                            <input type="text" name="company" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:border-[#0f172a] transition">
+                        </div>
+                        <div>
+                            <label id="lbl-name" class="block text-slate-500 text-xs font-bold mb-2"></label>
+                            <input type="text" name="name" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:border-[#0f172a] transition">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label id="lbl-email" class="block text-slate-500 text-xs font-bold mb-2"></label>
+                            <input type="email" name="email" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:border-[#0f172a] transition">
+                        </div>
+                        <div>
+                            <label id="lbl-phone" class="block text-slate-500 text-xs font-bold mb-2"></label>
+                            <input type="tel" name="phone" required placeholder="05xxxxxxxx" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:border-[#0f172a] transition">
+                        </div>
+                    </div>
+                    <div>
+                        <label id="lbl-service" class="block text-slate-500 text-xs font-bold mb-2"></label>
+                        <select id="service-select" name="service" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-700 text-sm focus:outline-none focus:border-[#0f172a] transition">
+                            </select>
+                    </div>
+                    <div>
+                        <label id="lbl-msg" class="block text-slate-500 text-xs font-bold mb-2"></label>
+                        <textarea rows="4" name="message" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:border-[#0f172a] transition"></textarea>
+                    </div>
+                    <button type="submit" id="btn-submit" class="w-full bg-[#0f172a] hover:bg-blue-900 text-white font-bold py-4 rounded-xl transition shadow-md flex items-center justify-center gap-2">
+                        <span id="btn-submit-text"></span>
+                        <i class="fas fa-circle-notch fa-spin hidden" id="btn-submit-spinner"></i>
+                    </button>
+                    <p id="form-error" class="hidden text-red-600 text-xs text-center font-bold"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#0f172a] py-12 text-center text-slate-400 text-xs">
+        <p class="text-white font-bold tracking-wider font-[Poppins] text-sm">GENERATION INFORMATION TECHNOLOGY COMPANY</p>
+        <p class="mt-2 font-[Poppins] text-blue-400 opacity-80">U-Connect with your future</p>
+        <p class="mt-4 text-slate-500">&copy; 2026 GEN IT. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

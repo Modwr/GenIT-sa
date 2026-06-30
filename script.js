@@ -200,8 +200,11 @@ document.getElementById('lead-form').addEventListener('submit', (e) => {
         body: formData,
         headers: { 'Accept': 'application/json' }
     })
-    .then((response) => {
-        if (!response.ok) throw new Error('Submission failed');
+    .then(async (response) => {
+        if (!response.ok) {
+            const errText = await response.text().catch(() => '');
+            throw new Error('Submission failed: ' + response.status + ' ' + errText);
+        }
 
         const responseBox = document.getElementById('sla-responder');
         document.getElementById('sla-title').innerText = data.slaTitle;
@@ -211,7 +214,8 @@ document.getElementById('lead-form').addEventListener('submit', (e) => {
         window.scrollTo({ top: responseBox.offsetTop - 120, behavior: 'smooth' });
         form.reset();
     })
-    .catch(() => {
+    .catch((err) => {
+        console.error('GEN-IT lead form submission error:', err);
         errorEl.innerText = data.errMsg;
         errorEl.classList.remove('hidden');
     })
